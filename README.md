@@ -42,6 +42,16 @@ Depois abra o endereco indicado no terminal, normalmente `http://localhost:3000`
 - `npm run start`: roda a versao de producao apos o build.
 - `npm run lint`: verifica problemas no codigo React/Next.
 
+## Hospedagem
+
+O projeto esta configurado para publicar automaticamente no GitHub Pages quando houver push na branch `master`.
+
+Endereco esperado:
+
+```text
+https://jorgeramalho.github.io/Projeto-BancoYona/
+```
+
 ## Observacao
 
 Os arquivos estaticos originais (`index.html`, `styles.css` e `script.js`) foram preservados como referencia, mas a versao principal do projeto agora esta em `app/` e `components/`.
