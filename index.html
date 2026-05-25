@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Landing page de lancamento do Banco Yona, um banco digital com identidade visual inspirada em 2019."
+    />
+    <title>Banco Yona | O banco para um mundo em movimento</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header" data-header>
+      <a class="brand" href="#top" aria-label="Banco Yona">
+        <span class="brand-mark">Y</span>
+        <span>Banco Yona</span>
+      </a>
+
+      <button
+        class="nav-toggle"
+        type="button"
+        data-nav-toggle
+        aria-label="Abrir menu"
+        aria-controls="site-nav"
+        aria-expanded="false"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="site-nav" id="site-nav" data-nav>
+        <a href="#app-yona">App</a>
+        <a href="#mundo-2019">2019</a>
+        <a href="#identidade">Identidade</a>
+        <a href="#produtos">Produtos</a>
+        <a href="#convite">Entrar na lista</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero section">
+        <div class="hero-copy">
+          <p class="eyebrow">Lancamento 2019</p>
+          <h1>O banco para um mundo em movimento.</h1>
+          <p class="hero-text">
+            Antes das chamadas por video virarem rotina, o Banco Yona nasce para quem vivia
+            entre metro, cafe, viagens, coworkings e planos para o futuro.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#convite">Quero ser avisado</a>
+            <a class="button button-ghost" href="#identidade">Ver identidade visual</a>
+          </div>
+          <dl class="hero-stats" aria-label="Diferenciais do Banco Yona">
+            <div>
+              <dt>24h</dt>
+              <dd>Conta digital</dd>
+            </div>
+            <div>
+              <dt>0</dt>
+              <dd>Tarifa de abertura</dd>
+            </div>
+            <div>
+              <dt>2019</dt>
+              <dd>Energia de lancamento</dd>
+            </div>
+          </dl>
+        </div>
+
+        <div class="hero-visual" role="img" aria-label="Pessoa usando celular em ambiente urbano">
+          <div class="phone-card">
+            <div class="phone-top">
+              <span></span>
+            </div>
+            <div class="app-card balance-card">
+              <span>Saldo Yona</span>
+              <strong>R$ 8.430,90</strong>
+              <small>+12% este mes</small>
+            </div>
+            <div class="app-grid">
+              <span>TED</span>
+              <span>Cartao</span>
+              <span>Investir</span>
+              <span>Viagem</span>
+            </div>
+            <div class="app-card movement-card">
+              <span>Cafe Central</span>
+              <strong>- R$ 18,70</strong>
+            </div>
+          </div>
+          <div class="photo-card photo-one"></div>
+          <div class="photo-card photo-two"></div>
+          <div class="orb orb-coral"></div>
+          <div class="orb orb-blue"></div>
+        </div>
+      </section>
+
+      <section class="section app-showcase-section" id="app-yona">
+        <div class="section-heading">
+          <p class="eyebrow">App Banco Yona</p>
+          <h2>Pessoas reais, cidade viva e o banco na palma da mao.</h2>
+          <p>
+            A campanha visual coloca o celular de frente, com a tela do app em destaque, cercado
+            por fotos de clientes em cafes, coworkings e encontros urbanos.
+          </p>
+        </div>
+
+        <div class="app-showcase">
+          <figure class="people-photo people-photo-main">
+            <img
+              src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1100&q=82"
+              alt="Pessoas conversando em um coworking com notebook e celular"
+              loading="lazy"
+            />
+            <figcaption>Coworkings, reunioes presenciais e planos grandes.</figcaption>
+          </figure>
+
+          <div class="front-phone" aria-label="Tela frontal do aplicativo Banco Yona">
+            <div class="phone-top">
+              <span></span>
+            </div>
+            <div class="app-home">
+              <div class="app-home-header">
+                <div>
+                  <span>Bom dia, Marina</span>
+                  <strong>Banco Yona</strong>
+                </div>
+                <span class="app-avatar">M</span>
+              </div>
+
+              <div class="cash-card">
+                <span>Saldo disponivel</span>
+                <strong>R$ 8.430,90</strong>
+                <small>Conta digital ativa desde 2019</small>
+              </div>
+
+              <div class="quick-actions" aria-label="Acoes do app Banco Yona">
+                <span>TED</span>
+                <span>Boleto</span>
+                <span>Cartao</span>
+                <span>Metas</span>
+              </div>
+
+              <div class="yona-card-preview">
+                <span>Yona Coral</span>
+                <strong>**** 2019</strong>
+              </div>
+
+              <div class="timeline">
+                <div class="timeline-row">
+                  <span>Cafe Central</span>
+                  <strong>- R$ 18,70</strong>
+                </div>
+                <div class="timeline-row">
+                  <span>Passagem urbana</span>
+                  <strong>- R$ 4,30</strong>
+                </div>
+                <div class="timeline-row">
+                  <span>Reserva viagem</span>
+                  <strong>+ R$ 250,00</strong>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <figure class="people-photo people-photo-side">
+            <img
+              src="https://images.unsplash.com/photo-1517242027094-631f8c218a0f?auto=format&fit=crop&w=900&q=82"
+              alt="Pessoa usando celular em uma cafeteria"
+              loading="lazy"
+            />
+            <figcaption>Celular aberto, luz natural e rotina antes da pandemia.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="section world-section" id="mundo-2019">
+        <div class="section-heading">
+          <p class="eyebrow">Como era o mundo?</p>
+          <h2>2019 tinha pressa, rua cheia e otimismo digital.</h2>
+        </div>
+        <div class="world-grid">
+          <article class="world-card">
+            <span>01</span>
+            <h3>Mobilidade e vida urbana</h3>
+            <p>
+              Rotina de metro, bicicletas, apps de transporte, aeroportos cheios e gente
+              resolvendo a vida no celular entre um compromisso e outro.
+            </p>
+          </article>
+          <article class="world-card">
+            <span>02</span>
+            <h3>Fintechs em alta</h3>
+            <p>
+              Bancos digitais, cartoes coloridos, onboarding sem agencia e uma linguagem mais
+              simples substituiam a burocracia bancaria tradicional.
+            </p>
+          </article>
+          <article class="world-card">
+            <span>03</span>
+            <h3>Conexao presencial</h3>
+            <p>
+              Shows, cafes, escritorios compartilhados, viagens de fim de semana e encontros
+              presenciais davam o tom de uma marca mais humana e social.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section identity-section" id="identidade">
+        <div class="section-heading">
+          <p class="eyebrow">Identidade visual</p>
+          <h2>Confiante como banco, vibrante como fintech de 2019.</h2>
+          <p>
+            A marca combina azul profundo para seguranca, turquesa para tecnologia, coral para
+            proximidade e amarelo para a sensacao de lancamento.
+          </p>
+        </div>
+
+        <div class="identity-layout">
+          <div class="palette" aria-label="Paleta de cores Banco Yona">
+            <article class="color-chip navy">
+              <span>#111A3D</span>
+              <strong>Azul Yona</strong>
+            </article>
+            <article class="color-chip teal">
+              <span>#00C2B8</span>
+              <strong>Turquesa Digital</strong>
+            </article>
+            <article class="color-chip coral">
+              <span>#FF6B5F</span>
+              <strong>Coral Humano</strong>
+            </article>
+            <article class="color-chip yellow">
+              <span>#FFD166</span>
+              <strong>Luz de Lancamento</strong>
+            </article>
+          </div>
+
+          <div class="type-card">
+            <p class="eyebrow">Tipografia</p>
+            <h3>Montserrat para impacto. Inter para clareza.</h3>
+            <p>
+              Titulos geometricos e fortes lembram as marcas digitais do periodo. Textos com
+              Inter deixam produtos financeiros mais legiveis, simples e diretos.
+            </p>
+            <div class="type-sample">
+              <span>Yona</span>
+              <small>Banco digital, cartao, viagens e planos.</small>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section products-section" id="produtos">
+        <div class="section-heading">
+          <p class="eyebrow">Para o perfil Yona</p>
+          <h2>Produtos para quem mistura carreira, cidade e futuro.</h2>
+        </div>
+
+        <div class="product-grid">
+          <article class="product-card featured">
+            <div class="card-icon">01</div>
+            <h3>Conta sem friccao</h3>
+            <p>Abra pelo celular, acompanhe gastos em tempo real e organize metas por planos.</p>
+          </article>
+          <article class="product-card">
+            <div class="card-icon">02</div>
+            <h3>Cartao Yona Coral</h3>
+            <p>Um cartao com personalidade, pensado para compras online, cafes e viagens.</p>
+          </article>
+          <article class="product-card">
+            <div class="card-icon">03</div>
+            <h3>Investimentos simples</h3>
+            <p>Primeiros passos com objetivos visuais: reserva, viagem, casa e estudos.</p>
+          </article>
+          <article class="product-card">
+            <div class="card-icon">04</div>
+            <h3>Clube de experiencias</h3>
+            <p>Beneficios em coworkings, eventos, mobilidade e parceiros urbanos.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section photo-section" aria-label="Direcao fotografica">
+        <div class="photo-copy">
+          <p class="eyebrow">Imagens e fotos</p>
+          <h2>Fotografia editorial, luz natural e pessoas em movimento.</h2>
+          <p>
+            A direcao de imagem evita o isolamento domestico e valoriza cenas de rua, encontros,
+            aeroportos, mesas de cafe, escritorios compartilhados e uso espontaneo do celular.
+          </p>
+        </div>
+        <div class="photo-mosaic">
+          <div class="mosaic-image mosaic-one"></div>
+          <div class="mosaic-image mosaic-two"></div>
+          <div class="mosaic-image mosaic-three"></div>
+        </div>
+      </section>
+
+      <section class="section invite-section" id="convite">
+        <div class="invite-card">
+          <div>
+            <p class="eyebrow">Lista de espera</p>
+            <h2>Entre no lancamento do Banco Yona.</h2>
+            <p>
+              Receba o convite de abertura, o guia de identidade da marca e as primeiras ofertas
+              para clientes fundadores.
+            </p>
+          </div>
+
+          <form class="waitlist-form" data-form>
+            <label for="email">Seu melhor e-mail</label>
+            <div class="form-row">
+              <input id="email" name="email" type="email" placeholder="voce@email.com" required />
+              <button class="button button-primary" type="submit">Enviar</button>
+            </div>
+            <p class="form-message" data-form-message aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <a class="brand" href="#top" aria-label="Banco Yona">
+        <span class="brand-mark">Y</span>
+        <span>Banco Yona</span>
+      </a>
+      <p>Uma landing page de lancamento com memoria visual de 2019.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
