@@ -2,13 +2,14 @@
 
 import { useEffect, useState } from "react";
 import { Brand } from "./Brand";
+import { ThemeToggle } from "./ThemeToggle";
 
 const navItems = [
   { href: "#app-yona", label: "App" },
-  { href: "#mundo-2019", label: "2019" },
+  { href: "#jornada-yona", label: "Nossa jornada" },
   { href: "#identidade", label: "Identidade" },
   { href: "#produtos", label: "Produtos" },
-  { href: "#convite", label: "Entrar na lista" },
+  { href: "#convite", label: "Cupom inauguração" },
 ];
 
 export function Header() {
@@ -36,19 +37,6 @@ export function Header() {
     <header className={`site-header${isScrolled ? " is-scrolled" : ""}`} data-header>
       <Brand />
 
-      <button
-        className="nav-toggle"
-        type="button"
-        aria-label="Abrir menu"
-        aria-controls="site-nav"
-        aria-expanded={isNavOpen}
-        onClick={() => setIsNavOpen((current) => !current)}
-      >
-        <span />
-        <span />
-        <span />
-      </button>
-
       <nav className={`site-nav${isNavOpen ? " is-open" : ""}`} id="site-nav">
         {navItems.map((item) => (
           <a key={item.href} href={item.href} onClick={() => setIsNavOpen(false)}>
@@ -56,6 +44,23 @@ export function Header() {
           </a>
         ))}
       </nav>
+
+      <div className="header-toolbar">
+        <ThemeToggle />
+
+        <button
+          className="nav-toggle"
+          type="button"
+          aria-label="Abrir menu"
+          aria-controls="site-nav"
+          aria-expanded={isNavOpen}
+          onClick={() => setIsNavOpen((current) => !current)}
+        >
+          <span />
+          <span />
+          <span />
+        </button>
+      </div>
     </header>
   );
 }
