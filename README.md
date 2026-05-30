@@ -1,57 +1,79 @@
 # Banco Yona
 
-Landing page de lancamento para o Banco Yona, agora migrada para Next.js com React e TypeScript.
+Landing page de lancamento do Banco Yona com identidade visual vibrante, efeitos dinamicos e cadastro para cupons de inauguracao.
 
-## Conceito
+## Duas formas de rodar o projeto
 
-O mundo de 2019 era marcado por mobilidade urbana, cafes, coworkings, viagens, eventos presenciais e forte crescimento de bancos digitais. A identidade do Banco Yona usa esse contexto para transmitir confianca bancaria com energia de fintech.
+### 1. Versao estatica (HTML + CSS + JavaScript)
 
-## Identidade Visual
+Abra `index.html` no navegador ou use um servidor local simples:
 
-- Cores: azul profundo `#111A3D`, turquesa digital `#00C2B8`, coral humano `#FF6B5F` e amarelo de lancamento `#FFD166`.
-- Tipografia: `Montserrat` para titulos fortes e geometricos, `Inter` para textos e interfaces financeiras.
-- Fotos: imagens editoriais com pessoas em movimento, luz natural, rua, trabalho compartilhado, viagens e celular em uso espontaneo.
+```bash
+npx serve .
+```
 
-## Stack
+Arquivos principais:
 
-- Next.js
-- React
-- TypeScript
-- CSS global simples, sem framework visual
+- `index.html` — estrutura da pagina
+- `styles.css` — estilos globais, gradientes e animacoes
+- `script.js` — navegacao, parallax, scroll reveal, formulario de cupom
 
-## Como Rodar
-
-Instale as dependencias:
+### 2. Versao React (Next.js + TypeScript)
 
 ```bash
 npm install
-```
-
-Rode o servidor local:
-
-```bash
 npm run dev
 ```
 
-Depois abra o endereco indicado no terminal, normalmente `http://localhost:3000`.
+Abra `http://localhost:3000`.
 
-## Scripts
+Componentes em `app/` e `components/`. O CSS e o mesmo arquivo `styles.css`.
 
-- `npm run dev`: inicia o ambiente local de desenvolvimento.
-- `npm run build`: gera a versao de producao.
-- `npm run start`: roda a versao de producao apos o build.
-- `npm run lint`: verifica problemas no codigo React/Next.
+## Identidade visual
 
-## Hospedagem
+- Cores: `#111A3D`, `#00C2B8`, `#FF6B5F`, `#FFD166`
+- Tipografia: **Plus Jakarta Sans** (titulos fintech) + **Inter** (textos e dados financeiros)
+- Efeitos: parallax, scroll reveal, tilt cards, barra de progresso, aura no cursor
+- **Tema escuro**: botao no header, preferencia salva em `localStorage` (`yona-theme`)
 
-O projeto esta configurado para publicar automaticamente no GitHub Pages quando houver push na branch `master`.
+## Cadastro de inauguracao
 
-Endereco esperado:
+Formulario com: nome, data de nascimento, cidade, telefone, e-mail e endereco. Ao enviar, o cliente recebe um codigo de cupom exclusivo (simulado no front-end).
+
+## Git e GitHub (fluxo profissional)
+
+```bash
+# 1. Atualizar branch local
+git pull origin master
+
+# 2. Criar branch de feature
+git checkout -b feat/nome-da-feature
+
+# 3. Ver alteracoes
+git status
+git diff
+
+# 4. Adicionar e commitar
+git add .
+git commit -m "feat: descricao clara da mudanca"
+
+# 5. Enviar para o GitHub
+git push -u origin feat/nome-da-feature
+
+# 6. Abrir Pull Request no GitHub e fazer merge em master
+```
+
+Deploy automatico no GitHub Pages apos merge em `master`:
 
 ```text
 https://jorgeramalho.github.io/Projeto-BancoYona/
 ```
 
-## Observacao
+## Scripts npm
 
-Os arquivos estaticos originais (`index.html`, `styles.css` e `script.js`) foram preservados como referencia, mas a versao principal do projeto agora esta em `app/` e `components/`.
+| Comando | Descricao |
+|---------|-----------|
+| `npm run dev` | Servidor de desenvolvimento Next.js |
+| `npm run build` | Build estatico para producao |
+| `npm run start` | Servidor de producao |
+| `npm run lint` | Verificacao ESLint |
