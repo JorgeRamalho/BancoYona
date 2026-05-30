@@ -1,28 +1,30 @@
 import type { Metadata } from "next";
-import { Inter, Montserrat } from "next/font/google";
+import { Inter, Plus_Jakarta_Sans } from "next/font/google";
+import { ThemeInit } from "@/components/ThemeInit";
 import "../styles.css";
 
 const inter = Inter({
   subsets: ["latin"],
-  variable: "--font-inter",
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-body",
   display: "swap",
 });
 
-const montserrat = Montserrat({
+const plusJakarta = Plus_Jakarta_Sans({
   subsets: ["latin"],
-  weight: ["700", "800", "900"],
-  variable: "--font-montserrat",
+  weight: ["600", "700", "800"],
+  variable: "--font-display",
   display: "swap",
 });
 
 export const metadata: Metadata = {
-  title: "Banco Yona | O banco para um mundo em movimento",
+  title: "Banco Yona | Desde 2019. Superou a pandemia. Venceu.",
   description:
-    "Landing page de lancamento do Banco Yona, um banco digital com identidade visual inspirada em 2019.",
+    "Banco digital desde 2019. Atravessou a pandemia, superou desafios e hoje chega mais forte — tipografia e experiencia no padrao das fintechs financeiras.",
   openGraph: {
-    title: "Banco Yona",
+    title: "Banco Yona — Desde 2019",
     description:
-      "O banco digital para quem mistura carreira, cidade e futuro com a energia visual de 2019.",
+      "Fundado em 2019, o Banco Yona passou pela pandemia, superou e venceu. Banco digital com confianca de instituicao financeira.",
     type: "website",
     images: [
       {
@@ -41,8 +43,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pt-BR">
-      <body className={`${inter.variable} ${montserrat.variable}`}>{children}</body>
+    <html lang="pt-BR" suppressHydrationWarning>
+      <body className={`${inter.variable} ${plusJakarta.variable}`}>
+        <ThemeInit />
+        {children}
+      </body>
     </html>
   );
 }
