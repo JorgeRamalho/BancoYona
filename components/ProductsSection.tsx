@@ -1,3 +1,7 @@
+import { SectionBackdrop } from "@/components/effects/SectionBackdrop";
+import { ScrollReveal } from "@/components/effects/ScrollReveal";
+import { TiltCard } from "@/components/effects/TiltCard";
+
 const products = [
   {
     number: "01",
@@ -24,24 +28,28 @@ const products = [
 
 export function ProductsSection() {
   return (
-    <section className="section products-section" id="produtos">
-      <div className="section-heading">
-        <p className="eyebrow">Para o perfil Yona</p>
-        <h2>Produtos para quem mistura carreira, cidade e futuro.</h2>
-      </div>
+    <div className="section-wrap section-wrap--products">
+      <SectionBackdrop variant="products" />
+      <section className="section products-section section-inner" id="produtos">
+        <ScrollReveal className="section-heading">
+          <p className="eyebrow">Para o perfil Yona</p>
+          <h2>Produtos para quem mistura carreira, cidade e futuro.</h2>
+        </ScrollReveal>
 
-      <div className="product-grid">
-        {products.map((product) => (
-          <article
-            className={`product-card${product.featured ? " featured" : ""}`}
-            key={product.number}
-          >
-            <div className="card-icon">{product.number}</div>
-            <h3>{product.title}</h3>
-            <p>{product.text}</p>
-          </article>
-        ))}
-      </div>
-    </section>
+        <div className="product-grid">
+          {products.map((product, index) => (
+            <ScrollReveal key={product.number} delay={index * 100}>
+              <TiltCard
+                className={`product-card${product.featured ? " featured" : ""}`}
+              >
+                <div className="card-icon">{product.number}</div>
+                <h3>{product.title}</h3>
+                <p>{product.text}</p>
+              </TiltCard>
+            </ScrollReveal>
+          ))}
+        </div>
+      </section>
+    </div>
   );
 }
